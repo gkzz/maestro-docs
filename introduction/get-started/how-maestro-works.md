@@ -41,7 +41,7 @@ Maestro Studio is the recommended entry point for new users to build tests visua
 
 #### Maestro CLI&#x20;
 
-The CLI is the open-source engine that interprets YAML files and sends instructions to the device. It is the primary tool for automated execution in Continuous Integration (CI) systems.
+The CLI is the open-source engine that interprets YAML files and sends instructions to the device. On both Android and iOS, it installs and communicates with a small companion driver app on the device to see what's on screen and carry out actions like taps and swipes. The CLI is the primary tool for automated execution in Continuous Integration (CI) systems.
 
 #### Maestro Cloud&#x20;
 

@@ -74,6 +74,30 @@ To resolve it:
 
 <details>
 
+<summary>Companion driver APK fails to install (<code>INSTALL_PARSE_FAILED_NO_CERTIFICATES</code>)</summary>
+
+#### What is happening
+
+Before running any flow, Maestro installs a small companion driver app onto the Android device. On hardened enterprise, MDM-locked, or fintech/POS devices that enforce strict APK signature verification at the kernel level, this install is rejected and Maestro cannot start. The error looks like:
+
+```
+Failed to install apk .../maestro-app*.apk: Install failed: Failure [INSTALL_PARSE_FAILED_NO_CERTIFICATES: ... using APK Signature Scheme v2: SecondarySignatureV2Verify fail]
+```
+
+#### Limitation
+
+The companion driver is required. Maestro relies on it for both device observations and interactions. Devices that block installation of the companion APK are not supported.
+
+Toggling **Verify apps over USB** or **Verify bytecode of debuggable apps** does not typically help with restrictions of this kind, and manually re-signing the APK may be flagged as tampering.
+
+#### Workaround
+
+Use a standard (non-hardened) Android device or emulator for your Maestro tests, or run against [Maestro Cloud](../../cloud/run-tests-on-maestro-cloud.md).
+
+</details>
+
+<details>
+
 <summary>Text input is not supported for Unicode</summary>
 
 #### What is happening
