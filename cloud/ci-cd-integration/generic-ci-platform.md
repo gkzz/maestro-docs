@@ -35,9 +35,9 @@ Refer to the appropriate guide if you are using one of the following CI/CD integ
 
 {% stepper %}
 {% step %}
-#### Organize your Flows
+**Organize your Flows**
 
-Add your Flow files to a single directory in your repository.&#x20;
+Add your Flow files to a single directory in your repository.
 
 ```
 <root>
@@ -52,7 +52,7 @@ In this configuration, files in the root of `e2e` run as top-level Flows. Files 
 {% endstep %}
 
 {% step %}
-### &#x20;Install the Maestro CLI
+#### Install the Maestro CLI
 
 Ensure the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/how-to-install-maestro-cli) is installed on your CI runner:
 
@@ -62,7 +62,7 @@ curl -Ls "https://get.maestro.mobile.dev" | bash
 {% endstep %}
 
 {% step %}
-### Run the cloud command
+#### Run the cloud command
 
 Execute the `maestro cloud` command as part of your pipeline.
 
@@ -86,11 +86,11 @@ The following table describes all the parameter you must pass:
 | `--flows`      | The directory containing your Flows.                                                                                                                                                |
 
 {% hint style="info" %}
-For a complete list of advanced flags, refer to the [Maestro CLI commands and options](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options "mention") reference.
+For a complete list of advanced flags, refer to the [Maestro CLI commands and options #cloud](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud "mention") reference.
 {% endhint %}
 
 {% hint style="info" %}
-#### Troubleshooting: Connection timeouts
+**Troubleshooting: Connection timeouts**
 
 If your CI runner fails to start the Maestro driver within the default timeframe, you may see a timeout error.
 
@@ -105,7 +105,7 @@ export MAESTRO_DRIVER_STARTUP_TIMEOUT=180000
 {% endstep %}
 
 {% step %}
-### Handling results
+#### Handling results
 
 Once your tests finish running, Maestro follows standard CI practices to let you know how they went:
 
