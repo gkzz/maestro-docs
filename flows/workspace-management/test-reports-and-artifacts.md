@@ -110,14 +110,12 @@ properties:
 
 #### What's inside the Artifact Folder?
 
-The contents of your artifact folders depend on which CLI flag you use. Note that `--test-output-dir` and `--debug-output` capture different sets of data:
+The contents of your artifact folders depend on which output directory you configure and whether you use one or both CLI flags:
 
-| **Feature**         | **`--test-output-dir`** | **`--debug-output`** |
-| ------------------- | ----------------------- | -------------------- |
-| Screenshots & Video | Yes                     | No                   |
-| `maestro.log`       | No                      | Yes                  |
-| `commands-*.json`   | Yes                     | Yes                  |
-| AI Reports          | Yes                     | Yes                  |
+| **Output directory** | **Primary contents** | **Notes** |
+| -------------------- | -------------------- | --------- |
+| `--test-output-dir`  | Screenshots & Video, `commands-*.json`, AI Reports | In single-flag runs, Maestro can also place `maestro.log` under the same run tree. |
+| `--debug-output`     | `maestro.log` | In single-flag runs, screenshots and `commands-*.json` can also appear under the default test output tree. |
 
 When using both flags, you must consider the following behaviour:
 
