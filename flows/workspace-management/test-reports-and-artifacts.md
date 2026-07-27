@@ -110,17 +110,17 @@ properties:
 
 #### What's inside the Artifact Folder?
 
-The contents of your artifact folders depend on which output directory you configure and whether you use one or both CLI flags:
+The contents of your artifact folders depend on which output directory you configure and whether you use one or both CLI flags.
 
-| **Output directory** | **Primary contents** | **Notes** |
-| -------------------- | -------------------- | --------- |
-| `--test-output-dir`  | Screenshots & Video, `commands-*.json`, AI Reports | In single-flag runs, Maestro can also place `maestro.log` under the same run tree. |
-| `--debug-output`     | `maestro.log` | In single-flag runs, screenshots and `commands-*.json` can also appear under the default test output tree. |
-
-When using both flags, you must consider the following behaviour:
+| Case | Feature |
+| ---- | ------- |
+| Neither flag specified | Maestro uses the default output directories described in the [Output directory](#output-directory) section. |
+| `--test-output-dir` only | Screenshots & Video, `commands-*.json`, AI Reports, and `maestro.log` under the same run tree. |
+| `--debug-output` only | `maestro.log`, while screenshots, video, `commands-*.json`, and AI Reports go to the default test output tree. |
+| Both flags specified | `--debug-output` receives only `maestro.log`, and `--test-output-dir` receives screenshots, video, `commands-*.json`, and AI Reports. |
 
 * **Same directory**: If both flags point to the same location, all artifacts are consolidated into that single folder.
-* **Different directories**: If the flags point to different directories, the `--debug-output` directory will receive **only** the `maestro.log`, while the `--test-output-dir` will receive everything else (Screenshots, Videos, Commands JSON, and AI Reports).
+* **Different directories**: If the flags point to different directories, the `--debug-output` directory receives **only** `maestro.log`, while the `--test-output-dir` receives everything else.
 
 ### Next steps
 
