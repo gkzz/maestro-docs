@@ -119,8 +119,7 @@ The contents of your artifact folders depend on which output directory you confi
 | `--debug-output` only | `maestro.log`, while screenshots, video, `commands-*.json`, and AI Reports go to the default test output tree. |
 | Both flags specified | `--debug-output` receives only `maestro.log`, and `--test-output-dir` receives screenshots, video, `commands-*.json`, and AI Reports. |
 
-* **Same directory**: If both flags point to the same location, all artifacts are consolidated into that single folder.
-* **Different directories**: If the flags point to different directories, the `--debug-output` directory receives **only** `maestro.log`, while the `--test-output-dir` receives everything else.
+If both flags point to the same directory, all artifacts are consolidated there; otherwise, `--debug-output` receives only `maestro.log`, and `--test-output-dir` receives everything else.
 
 ### Next steps
 
