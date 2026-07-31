@@ -117,9 +117,7 @@ The contents of your artifact folders depend on which output directory you confi
 | Neither flag specified | Maestro uses the default output directories described in the [Output directory](#output-directory) section. |
 | `--test-output-dir` only | Screenshots & Video, `commands-*.json`, AI Reports, and `maestro.log` under the same run tree. |
 | `--debug-output` only | `maestro.log`, while screenshots, video, `commands-*.json`, and AI Reports go to the default test output tree. |
-| Both flags specified | `--debug-output` receives only `maestro.log`, and `--test-output-dir` receives screenshots, video, `commands-*.json`, and AI Reports. |
-
-If both flags point to the same directory, all artifacts are consolidated there; otherwise, `--debug-output` receives only `maestro.log`, and `--test-output-dir` receives everything else.
+| Both flags specified | Unless they both point to the same directory, `--debug-output` receives only `maestro.log`, and `--test-output-dir` receives screenshots, video, `commands-*.json`, and AI Reports. |
 
 ### Next steps
 
