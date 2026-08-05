@@ -17,7 +17,7 @@ Enable webhooks to send real-time notifications about upload results from a spec
 Follow these steps to configure a webhook in the Maestro:
 
 1. Log in to the [Maestro Dashboard](https://app.maestro.dev/).
-2. Click **Settings** in the sidebar.&#x20;
+2. Click **Settings** in the sidebar.
 3. Select the project for which you want to configure webhooks.
 4. Under **Webhook Management**, enter your webhook URL. You must provide the full URL where Maestro should send POST requests.
 
@@ -57,6 +57,9 @@ Below is an example of the data sent:
     "MAESTRO_FILENAME": "android-advanced-flow"
   },
   "platform": "ANDROID",
+  "deviceModel": "iPhone-17-Pro-Max",
+  "osVersion": "iOS-26-2",
+  "deviceLocale": "en_US",
   "appId": "app_01kgfx3k6gfx4t84qyr8f3q9nj",
   "startTime": 1770114514724,
   "endTime": 1770114503499,
